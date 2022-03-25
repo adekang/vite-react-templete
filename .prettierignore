@@ -16,3 +16,4 @@ yarn-error.log
 CNAME
 /build
 /public
+pnpm-lock.yaml
