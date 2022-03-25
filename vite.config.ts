@@ -1,17 +1,18 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from "vite";
+import * as path from "path";
+import createVitePlugins from "./config/plugins";
+import cssOption from "./config/style";
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  css: {
-    preprocessorOptions: {
-      less: {
-        javascriptEnabled: true,
-      },
-      scss: {
-        additionalData: '@import "./src/assets/scss/varible.scss";',
+export default defineConfig((config) => {
+  console.log(config);
+
+  return {
+    plugins: createVitePlugins(),
+    css: cssOption,
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "src"),
       },
     },
-  },
+  };
 });
