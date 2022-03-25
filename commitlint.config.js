@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
   // ↓忽略包含init的提交消息
   ignores: [(commit) => commit.includes("init")],
