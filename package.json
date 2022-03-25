@@ -6,12 +6,13 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx",
     "prettier": "prettier --write .",
     "install:husky": "husky install",
+    "lint:fix": "eslint --cache --ext .js,.jsx,.ts,.tsx --no-error-on-unmatched-pattern --quiet --fix ./src",
+    "lint:style": "stylelint --fix \"**/*.{tsx,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
     "lint:pretty": "pretty-quick --staged",
-    "lint:stylelint": "stylelint --fix \"**/*.{tsx,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
-    "lint:all": "yarn run lint:eslint && yarn run lint:stylelint"
+    "lint:all": "yarn run lint:fix && yarn run lint:style",
+    "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite"
   },
   "dependencies": {
     "react": "^17.0.2",

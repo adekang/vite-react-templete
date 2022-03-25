@@ -1,4 +1,5 @@
 $bg: #f0f0f0;
+
 @mixin flexContainer($jc) {
   display: flex;
   flex-direction: row;
@@ -8,6 +9,6 @@ $bg: #f0f0f0;
 
 @mixin style($size, $color, $bold: normal) {
   font-size: $size;
-  color: $color;
   font-weight: $bold;
+  color: $color;
 }
