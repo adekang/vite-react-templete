@@ -4,11 +4,13 @@ import createVitePlugins from "./config/plugins";
 import cssOption from "./config/style";
 import build from "./config/build";
 import proxy from "./config/setupProxy";
+import { VITE_APP_BASE } from "./config";
 
 export default defineConfig((config) => {
   console.log(config);
 
   return {
+    base: VITE_APP_BASE,
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "src"),
