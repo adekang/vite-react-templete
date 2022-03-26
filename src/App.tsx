@@ -13,7 +13,8 @@ function App() {
         </button>
       </p>
       <div>
-        <SvgIcon className={"icon"} iconName={"play"} />
+        <SvgIcon className="icon" iconName="play" />
+        <SvgIcon className="icon" iconName="pose" />
       </div>
     </div>
   );

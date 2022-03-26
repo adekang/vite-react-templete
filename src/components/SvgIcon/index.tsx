@@ -11,7 +11,6 @@ export type svgProps = {
 
 const SvgIcon: React.FC<svgProps> = (props) => {
   const { fontSize, style, className, onClick, iconName, fill } = props;
-
   const symbolId = useMemo(() => `#icon-${iconName}`, [iconName]);
 
   return (
