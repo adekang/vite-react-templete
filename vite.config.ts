@@ -3,6 +3,7 @@ import * as path from "path";
 import createVitePlugins from "./config/plugins";
 import cssOption from "./config/style";
 import build from "./config/build";
+import proxy from "./config/setupProxy";
 
 export default defineConfig((config) => {
   console.log(config);
@@ -16,5 +17,6 @@ export default defineConfig((config) => {
     plugins: createVitePlugins(),
     css: cssOption,
     build,
+    proxy,
   };
 });

@@ -1,5 +1,5 @@
 import visualizer from "rollup-plugin-visualizer";
-import { Plugin } from "vite";
+// import { Plugin } from "vite";
 /**
  * @description 对打包之后的包依赖进行分析
  */

@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "virtual:svg-icons-register";
 import "./index.less";
 import App from "./App";
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.scss";
+import SvgIcon from "./components/SvgIcon";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -11,6 +12,9 @@ function App() {
           count is: {count}
         </button>
       </p>
+      <div>
+        <SvgIcon className={"icon"} iconName={"play"} />
+      </div>
     </div>
   );
 }
