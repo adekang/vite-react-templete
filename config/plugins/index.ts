@@ -9,7 +9,7 @@ export default function createVitePlugins() {
   const vitePlugins: (Plugin | Plugin[] | PluginOption[])[] = [
     react(),
     configSvgIcons(),
-    configStyleImport(),
+    // configStyleImport(),
   ];
   VITE_APP_VISUALIZER && vitePlugins.push(configVisualizerConfig);
   return vitePlugins;

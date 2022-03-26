@@ -7,8 +7,6 @@ import proxy from "./config/setupProxy";
 import { VITE_APP_BASE } from "./config";
 
 export default defineConfig((config) => {
-  console.log(config);
-
   return {
     base: VITE_APP_BASE,
     resolve: {

@@ -1,23 +1,19 @@
-import React, { useState } from "react";
-import "./App.scss";
-import SvgIcon from "./components/SvgIcon";
+import React, { FC } from "react";
+import { useRoutes } from "react-router-dom";
+import "./app.scss";
 
-function App() {
-  const [count, setCount] = useState(0);
+import routes from "@/router/route";
+
+const App: FC = function () {
+  const element = useRoutes(routes);
 
   return (
-    <div className="App">
-      <p>
-        <button type="button" onClick={() => setCount((count) => count + 1)}>
-          count is: {count}
-        </button>
-      </p>
-      <div>
-        <SvgIcon className="icon" iconName="play" />
-        <SvgIcon className="icon" iconName="pose" />
-      </div>
-    </div>
+    <>
+      <div>{element}</div>
+    </>
   );
-}
+};
 
 export default App;
+
+// <SvgIcon className="icon" iconName="pose" />
